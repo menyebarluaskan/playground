@@ -77,5 +77,6 @@ jobs:
       - name: Deploy to GitHub Pages Branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           folder: build/WebGL/WebGL
           branch: gh-pages
