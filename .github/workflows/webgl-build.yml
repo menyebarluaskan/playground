@@ -74,18 +74,8 @@ jobs:
           name: github-pages
           path: build/WebGL/WebGL
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-          path: build
       - name: Deploy to GitHub Pages Branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: build/WebGL/WebGL
           branch: gh-pages
